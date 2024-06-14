@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cursor {
+  position: fixed;
+  border-radius: 120%;
+  background-color: transparent;
+  border: 2px solid white;
+  height: 30px;
+  width: 30px;
+}
+
+body {
+  margin: 0;
+  background: #20262E;
+  min-height: 300px;
+  color: white;
+
+}
+
+
+
+    </style>
+</head>
+<body>
+    <p>body</p>
+    <div class='cursor' id="cursor"></div>
+
+<p class="blog">
+    hello 
+</p>
+<script>
+    var cursor = document.getElementById("cursor");
+document.body.addEventListener("mousemove", function(e) {
+  cursor.style.left = e.clientX + "px",
+    cursor.style.top = e.clientY + "px";
+});
+</script>
+</body>
+</html>
