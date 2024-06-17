@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bag</title>
+  <style>
+    #add{
+      background-color: #FFA500;
+      color: rgb(9, 53, 92);
+      border: solid ;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    #remove{
+      background-color: rgb(212, 13, 13);
+      color: whitesmoke;
+      border: solid ;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="add" onclick="addToCart()">Add to bag</button>
+  <button id="remove"onclick="remove()">Remove</button>
+  <h2 id="cartSummary">Your bag has 0 items</h2>
+
+  <script>
+    let cartQuantity = 0;
+    function updateCartSummary(){
+          document.querySelector('#cartSummary').innerText ='Your bag has '+ cartQuantity +' items'
+    }
+    function addToCart(){
+      cartQuantity=cartQuantity+1;
+      updateCartSummary();
+    }
+    function remove(){
+      if(cartQuantity>0)
+      cartQuantity=cartQuantity-1;
+      updateCartSummary();
+    }
+    updateCartSummary();
+  </script>
+</body>
+</html>
