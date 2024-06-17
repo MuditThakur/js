@@ -32,13 +32,15 @@
           document.querySelector('#cartSummary').innerText ='Your bag has '+ cartQuantity +' items'
     }
     function addToCart(){
-      cartQuantity=cartQuantity+1;
+      cartQuantity++;
       updateCartSummary();
+      console.log(cartQuantity);
     }
     function remove(){
       if(cartQuantity>0)
-      cartQuantity=cartQuantity-1;
+      cartQuantity--;
       updateCartSummary();
+      console.log(cartQuantity);
     }
     updateCartSummary();
   </script>
