@@ -24,6 +24,7 @@
 <body>
   <button id="add" onclick="addToCart()">Add to bag</button>
   <button id="remove"onclick="remove()">Remove</button>
+  <button id="remove"onclick="removeAll()">Remove All</button>
   <h2 id="cartSummary">Add items to bag </h2>
 
   <script>
@@ -39,6 +40,13 @@
     function remove(){
       if(cartQuantity>0)
       cartQuantity--;
+      updateCartSummary();
+      console.log(cartQuantity);
+    }
+    function removeAll(){
+      if(cartQuantity>1){
+        cartQuantity -=2;
+      }
       updateCartSummary();
       console.log(cartQuantity);
     }
