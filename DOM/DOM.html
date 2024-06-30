@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+  
+  <script>
+    // DOM (Document Object Model) is a programming interface for HTML and XML documents.
+    // It represents the page as a tree structure, where each node is an object representing an element, attribute, or text content.
+    // JavaScript can be used to interact with the DOM to manipulate the structure, style, and content of web pages.
+
+    // Get an element by its ID
+    const myHeading = document.getElementById("myHeading");
+    console.log(myHeading); // Output: The HTML heading element with ID "myHeading"
+
+    // Change the content of the heading
+    myHeading.textContent = "Hello, World!";
+
+    // Create a new element
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is a new paragraph.";
+
+    // Append the new paragraph to the body
+    document.body.appendChild(newParagraph);
+
+    // Example: Change the style of an element
+    const myButton = document.getElementById("myButton");
+    myButton.style.backgroundColor = "red";
+    myButton.style.color = "white";
+
+    // Example: Add an event listener
+    const myLink = document.getElementById("myLink");
+    myLink.addEventListener("click", function() {
+      alert("You clicked the link!");
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
