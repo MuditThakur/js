@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="id1" class="class1">hey</div>
+
+  <script>
+    let id1 = document.getElementById("id1"); // Retrieve the element
+    if (id1) {
+      let a = id1.getAttribute("class");
+      console.log(a);
+
+      console.log(id1.hasAttribute("class")); // Check if the element has the "class" attribute
+      console.log(id1.hasAttribute("style")); // Check if the element has the "style" attribute
+
+      id1.setAttribute("hidden", "true"); // Set the value of an attribute
+    } else {
+      console.error("Element with id 'id1' not found");
+    }
+  </script>
+</body>
+
+</html>
