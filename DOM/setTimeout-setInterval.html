@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+  <script>document.write("Hello world");
+  let a =  setTimeout(function(){
+    alert("I am inside of settimeout")
+  },5000)
+  let b = prompt("Do you want to run the settimeout? n/y")
+  if("n" == b){
+    clearTimeout(a)
+  }
+  //example 2
+  const sum =(a,b)=>{
+    console.log("Yes I am running"+(a+b))
+    return a+b
+  }
+  setTimeout(sum,1,2)
+  //example 3
+  let counter = 0;
+  const intervalId = setInterval(() => {
+    console.log("Interval running:", counter);
+    counter++;
+    if (counter >= 5) {
+      clearInterval(intervalId);
+      console.log("Interval stopped");
+    }
+  }, 1000); // Every 1 second
+</script>
+</body>
+
+</html>
