@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse and Keyboard Events</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+            line-height: 200px;
+            border: 2px solid #333;
+        }
+
+        #mouseBox {
+            background-color: #f0f0f0;
+        }
+
+        #keyboardBox {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Mouse and Keyboard Events Demo</h1>
+
+<div id="mouseBox" class="box">Mouse Box</div>
+<div id="keyboardBox" class="box" tabindex="0">Keyboard Box</div>
+
+<script>
+    // Mouse events
+    const mouseBox = document.getElementById('mouseBox');
+
+    mouseBox.addEventListener('click', () => {
+        alert('Mouse Clicked');
+    });
+
+    mouseBox.addEventListener('mouseover', () => {
+        mouseBox.style.backgroundColor = '#ddd';
+    });
+
+    mouseBox.addEventListener('mouseout', () => {
+        mouseBox.style.backgroundColor = '#f0f0f0';
+    });
+
+    // Keyboard events
+    const keyboardBox = document.getElementById('keyboardBox');
+
+    keyboardBox.addEventListener('keydown', (event) => {
+        console.log('Key Down:', event.key);
+    });
+
+    keyboardBox.addEventListener('keyup', (event) => {
+        console.log('Key Up:', event.key);
+    });
+
+    keyboardBox.addEventListener('keypress', (event) => {
+        console.log('Key Pressed:', event.key);
+    });
+
+    // Ensure the keyboard box is focusable
+    keyboardBox.addEventListener('focus', () => {
+        keyboardBox.style.border = '2px solid blue';
+    });
+
+    keyboardBox.addEventListener('blur', () => {
+        keyboardBox.style.border = '2px solid #333';
+    });
+</script>
+
+</body>
+</html>
